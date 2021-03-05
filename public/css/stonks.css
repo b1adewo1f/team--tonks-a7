@@ -1,6 +1,45 @@
 body {
-  padding-bottom: 50px;
+    padding-bottom: 225px;
+    background-image: url("images/background.svg");
 }
-.stonks {
-  text-align: center;
+.navbar {
+    background-color: #C4C4C4;
+}
+
+.panel panel-default {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo-row {
+    text-align: center;
+}
+
+.form-horizontal {
+    background-color: #C4C4C4;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+    margin: 25px 50px 50px 100px
+}
+
+.form-horizontal .form-group {
+        padding-left: 20px; 
+        padding-right: 20px;
+
+}
+
+.panel-group {
+    margin: 25px 50px 50px 100px
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
