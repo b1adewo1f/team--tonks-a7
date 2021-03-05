@@ -14,6 +14,27 @@
 </head>
 <!-- Main Page -->
 <body>
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+                appId: '1595333307328537',
+				cookie: true,
+				xfbml: true,
+				version: 'v10.0'
+			});
+
+			FB.AppEvents.logPageView();
+
+		};
+
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<!-- Heading End -->
 	<!-- Log-In -->
 	<!-- The index page is now the log-in screen! -->
@@ -53,17 +74,18 @@
 			</div>
 			<a class="btn btn-default" href="/home" role="button">Sign-in</a>
 			<h4>or</h4>
-			<a class="btn btn-default" href="/home" role="button">Log-In with Facebook</a>
+			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
 		</form>
-	<!-- The button below is how someone signs-in with facebook -->
-	<!-- When someone signs-in with facebook, he/she also goes straight to the home page -->
-	<!-- I will let you (Myles) decide on what FB info gets rendered in the Profile section -->
-	<!-- End of Login -->
-	<!-- I have comments scattered throughout the handlebars pages if you need more info -->
-	<!-- I also sent an e-mail about "each loops," which should make creating JSONs easier. -->
-	<!-- Lab 4 contains info about "each loops"! -->
-	<!-- When viewing the project in Chrome (or any browser), toggle to a "mobile" view -->
-	<!-- The final navbar is a vertical one because making a horizontal one is a pain DX -->
+		<!-- The button below is how someone signs-in with facebook -->
+		<!-- When someone signs-in with facebook, he/she also goes straight to the home page -->
+		<!-- I will let you (Myles) decide on what FB info gets rendered in the Profile section -->
+		<!-- End of Login -->
+		<!-- I have comments scattered throughout the handlebars pages if you need more info -->
+		<!-- I also sent an e-mail about "each loops," which should make creating JSONs easier. -->
+		<!-- Lab 4 contains info about "each loops"! -->
+		<!-- When viewing the project in Chrome (or any browser), toggle to a "mobile" view -->
+		<!-- The final navbar is a vertical one because making a horizontal one is a pain DX -->
 	</div>
 </body>
 </html>
