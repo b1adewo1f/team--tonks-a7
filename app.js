@@ -15,7 +15,6 @@ var index = require('./routes/index');
 var home = require('./routes/home');
 var education = require("./routes/education");
 var investing = require("./routes/investing");
-var profile = require("./routes/profile");
 var support = require("./routes/support");
 // Routes to Side Pages
 var lesson_1_graph = require("./routes/lesson-1-graph");
@@ -50,7 +49,6 @@ app.get('/', index.view);
 app.get('/home', home.view);
 app.get('/education', education.view);
 app.get('/investing', investing.view);
-app.get('/profile', profile.view);
 app.get('/support', support.view);
 // Routes for Side Pages
 app.get('/lesson-1-graph', lesson_1_graph.view);
